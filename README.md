@@ -46,7 +46,7 @@ First check out the repository if you haven't already:
 Check out the following specific commit in order to ensure that
 there is no tampering or other deviation:
 
-    $ git checkout <TODO: INSERT COMMIT-ISH HERE>
+    $ git checkout f298a820ff856d7f6b05cda4a55b9699d4844f2e
 
 You may optionally wish to verify the integrity of the repository:
 
@@ -172,8 +172,8 @@ Next we generated the initial `.zkey` files:
 
     yarn zkey
 
-We checked out https://github.com/appliedzkp/multisetups at commit
-586bdb8da306628a2defe384ee1d1af7019120e9, then created the Docker
+We checked out https://github.com/aspiers/multisetups at commit
+f298a820ff856d7f6b05cda4a55b9699d4844f2e, then created the Docker
 image:
 
     cd multisetups
@@ -197,7 +197,7 @@ perform verification:
 
     docker exec -it prezkp node build/index.js upload -d /ceremony/r1cs
 
-which resulted in the content id `QmQffKEsC15gpdFsWjPgQ2DM2TLDX4P9h686JW6u8JZ1g9`.
+which resulted in the content id `QmUXxQLbfKDvNXbFKRo8YNXGPKh1bZ3yuaZkrtuRtw2sGj`.
 
 Finally we created a new ceremony:
 
@@ -206,7 +206,7 @@ Finally we created a new ceremony:
 which resulted in the following message:
 
     Ceremony initialised. Please give this multihash to the first participant and keep your IPFS node running and connected to the IPFS network.
-    QmQnZ4gc4Y36bmBNKo4YwvUSJ1oAd7kKVSgpBQQB5ueLU9
+    QmTS7CtiJnyYJqyVVAxgbRKu1zMCsjXwTLPiXshhPr2ELU
 
 ## Handling contributions
 
