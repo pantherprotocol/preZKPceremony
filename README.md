@@ -249,4 +249,8 @@ Verify the signature (if any):
 
     gpg --verify preZKP/$cdir/transcript.*.txt.asc
 
+Upload the directory so it's available for the next contributor:
+
+    docker exec -it prezkp node build/index.js upload -d /ceremony/$cdir
+
 Then share the same content id with the next contributor.
