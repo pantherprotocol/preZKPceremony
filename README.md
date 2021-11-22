@@ -108,13 +108,14 @@ Perpetual Powers of Tau, which is a 144MB download:
 
 You'll also need the `.r1cs` file for the circuit:
 
-    $ docker exec -it prezkp node build/index.js download -m QmQffKEsC15gpdFsWjPgQ2DM2TLDX4P9h686JW6u8JZ1g9 -d /ceremony/r1cs
+    $ docker exec -it prezkp node build/index.js download -m QmUXxQLbfKDvNXbFKRo8YNXGPKh1bZ3yuaZkrtuRtw2sGj -d /ceremony/r1cs
 
 At this point you can safely ignore the error:
 
     Error: there are no .zkey files in /ceremony/r1cs
 
-Now perform the verification:
+Now perform the verification (note you will have to alter the sequence
+number in the last argument):
 
     docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/$ptau /ceremony/old/PreZKP_10_prod.0.zkey
 
@@ -132,9 +133,10 @@ Calculate your contribution:
     Contribution complete. Please run the 'upload' subcommand. Next, sign the transcript in /ceremony/new/transcript.1.txt and send it to the coordinator.
 
 Despite what it says here, it is simpler if you put the signature alongside
-the transcript; however due t e.g.:
+the transcript, for example like the following (you will have to adjust the
+sequence number in the filename):
 
-    $ gpg --sign ceremony/new/transcript.1.txt
+    $ gpg --sign --armor ceremony/new/transcript.1.txt
 
 To upload the contribution:
 
