@@ -185,8 +185,8 @@ We set up directories with the `.zkey`, `.r1cs`, and `.ptau` files:
     cp ../preZKP/circuits/zkeys/*.zkey preZKP/0000_initial
     cp ../preZKP/circuits/zkeys/*.r1cs preZKP/r1cs
     cp ../preZKP/circuits/zkeys/*.ptau preZKP/ptau
-    gpg --sign preZKP/0000_initial/*.zkey
-    gpg --sign preZKP/r1cs/*.r1cs
+    gpg --sign --armor preZKP/0000_initial/*.zkey
+    gpg --sign --armor preZKP/r1cs/*.r1cs
 
 and ran the server as a container in the background:
 
