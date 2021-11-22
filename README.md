@@ -247,6 +247,6 @@ Check the verification passed; last line of the output should be:
 
 Verify the signature (if any):
 
-    gpg verify prezkp/$cid/transcript.1.txt.gpg
+    gpg --verify preZKP/$cdir/transcript.*.txt.asc
 
 Then share the same content id with the next contributor.
