@@ -234,12 +234,12 @@ Set variables storing the sequence number and contributor's nick / handle, e.g.
 
 Download the contribution into a fresh directory:
 
-    docker exec -it prezkp node build/index.js download -m $ccid -d /ceremony/$cid
+    docker exec -it prezkp node build/index.js download -m $ccid -d /ceremony/$cdir
 
 Verify the contribution:
 
     ptau=powersOfTau28_hez_final_17.ptau
-    docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/ptau/$ptau /ceremony/$cid/PreZKP_10_prod.$cseq.zkey
+    docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/ptau/$ptau /ceremony/$cdir/PreZKP_10_prod.$cseq.zkey
 
 Check the verification passed; last line of the output should be:
 
