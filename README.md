@@ -137,10 +137,22 @@ Calculate your contribution:
     Contribution complete. Please run the 'upload' subcommand. Next, sign the transcript in /ceremony/new/transcript.1.txt and send it to the coordinator.
 
 Despite what it says here, it is simpler if you put the signature alongside
-the transcript, for example like the following (you will have to adjust the
-sequence number in the filename):
+the transcript, e.g.:
 
-    $ gpg --sign --armor ceremony/new/transcript.1.txt
+    $ gpg --detach-sign --armor ceremony/new/transcript.*.txt
+
+Even better, use [Keybase](https://keybase.io/) to cryptographically
+prove the link between your GPG private key and your other accounts
+such as GitHub, Twitter etc.
+
+You can even sign directly with Keybase, e.g.
+
+    $ new=ceremony/new/transcript.3.txt  # adjust number as appropriate
+    $ keybase sign -d -i $new -o $new.asc
+
+or via PGP:
+
+    $ keybase pgp sign -d -i $new -o $new.asc
 
 To upload the contribution:
 
@@ -191,8 +203,8 @@ We set up directories with the `.zkey`, `.r1cs`, and `.ptau` files:
     cp ../preZKP/circuits/zkeys/*.zkey preZKP/0000_initial
     cp ../preZKP/circuits/zkeys/*.r1cs preZKP/r1cs
     cp ../preZKP/circuits/zkeys/*.ptau preZKP/ptau
-    gpg --sign --armor preZKP/0000_initial/*.zkey
-    gpg --sign --armor preZKP/r1cs/*.r1cs
+    gpg --detach-sign --armor preZKP/0000_initial/*.zkey
+    gpg --detach-sign --armor preZKP/r1cs/*.r1cs
 
 and ran the server as a container in the background:
 
