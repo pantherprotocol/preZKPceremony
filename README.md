@@ -194,6 +194,10 @@ and ran the server as a container in the background:
 
     docker run --name prezkp -d --rm -v $PWD/preZKP:/ceremony -p 4001:4001 -p 5001:5001 -p 8080:8080 multisetups
 
+(Note that this bind-mount's source is deliberately different to the
+one for contributors, in order to avoid mistakes when the same person
+is testing the ceremony as both a coordinator and contributor.)
+
 We uploaded the `.r1cs` file to allow participants to optionally
 perform verification:
 
