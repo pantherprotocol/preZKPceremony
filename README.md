@@ -119,6 +119,10 @@ number in the last argument):
 
     docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/$ptau /ceremony/old/PreZKP_10_prod.0.zkey
 
+Check the verification passed; last line of the output should be:
+
+    [INFO]  snarkJS: ZKey Ok!
+
 ### Making a contribution
 
 Store some entropy in an `$entropy` environment variable:
@@ -236,6 +240,10 @@ Verify the contribution:
 
     ptau=powersOfTau28_hez_final_17.ptau
     docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/ptau/$ptau /ceremony/$cid/PreZKP_10_prod.$cseq.zkey
+
+Check the verification passed; last line of the output should be:
+
+    [INFO]  snarkJS: ZKey Ok!
 
 Verify the signature (if any):
 
