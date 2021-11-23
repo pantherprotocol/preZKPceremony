@@ -21,7 +21,7 @@ to the [Perpetual Powers of Tau][ppot] project.
 
   - `docker`
 
-Currently Linux has been tested, but MacOS and Windows may also work;
+Currently Linux and MacOS have been tested, but Windows may also work;
 any feedback on this is gratefully received.
 
 ## Security recommendations
