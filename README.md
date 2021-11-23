@@ -247,7 +247,9 @@ site](https://www.keccak-256.cloxy.net/).)
 
 We have then made a commitment to this hash by placing it within
 [transaction `0x489212672a43220f8229752242d7bb1ec13349a37770955d9b82c737c3c69c56` on the Ethereum
-mainnet](https://etherscan.io/tx/0x489212672a43220f8229752242d7bb1ec13349a37770955d9b82c737c3c69c56).
+mainnet](https://etherscan.io/tx/0x489212672a43220f8229752242d7bb1ec13349a37770955d9b82c737c3c69c56)
+(click on `Click to see More` to expand extra data about the transaction,
+and you will see the above commitment hash in the `Input Data` box).
 
 After the random of round 1410000 has arrived, it can be verified via
 [the `drand_verify` tool](https://github.com/hermeznetwork/drand_verify).
