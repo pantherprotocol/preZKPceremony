@@ -80,7 +80,9 @@ At this point you can hit `Control-C` to stop watching the logs.
 Finally, to reduce the risk of network connectivity issues:
 
   - Please ensure that your machine's firewall (if any) allows
-    incoming traffic on TCP port 4001.
+    incoming traffic on at least TCP port 4001, and also maybe
+    UDP 4001.  (MacOS instructions
+    [here](https://support.apple.com/en-gb/guide/mac-help/mh11783/mac).)
 
   - If you have a NAT router, please consider enabling UPnP
     and/or setting up port forwarding for incoming traffic on
