@@ -1,0 +1,12 @@
+node ./node_modules/snarkjs/build/cli.cjs zkey contribute /ceremony/old/PreZKP_10_prod.6.zkey /ceremony/new/PreZKP_10_prod.7.zkey
+Enter a random text. (Entropy): 
+[32;22m[INFO]  [39;1msnarkJS[0m: Circuit Hash: 
+		cfe5dde7 42e5da76 7cf4b00d 636ac35e
+		ee02c799 d492db63 5ee1616a 60715852
+		dcbdd452 007aaac1 e3c242e3 e248aabd
+		58346957 334e2e27 815162bb fd4136f5
+[32;22m[INFO]  [39;1msnarkJS[0m: Contribution Hash: 
+		8e16d15a 036a47cc 4981adec 7c68b74c
+		cdef9f1e b2727e8b 8adab643 ae9eba09
+		f9efe3b7 6bf55ea2 30ea90ac fae84b76
+		e8447c6e 35d76da6 e9c2a937 6ee5668c
