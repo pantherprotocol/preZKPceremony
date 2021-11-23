@@ -197,6 +197,51 @@ can't download your contribution via IPFS, a fallback plan is simply
 to submit a PR to this repository which adds a new directory following
 the existing scheme.
 
+## Completing the ceremony
+
+Following standard practice for trusted setup ceremonies, in order to
+calculate the final zkey file of the PreZKP ceremony, we will apply a
+random beacon to the circuit, via:
+
+    snarkjs zkey beacon <circuit_prev.zkey> <circuit_final.zkey> <beaconHash(Hex)> <numIterationsExp>
+
+In order to prove that we cannot know this randomness in advance, we
+make a commitment to taking it from [the drand
+chain](https://drand.love) at a fixed point in the future,
+specifically round 1410000 - and furthermore, we provide a guarantee
+that we cannot tamper with that commitment in an undetectable way, as
+follows:
+
+We have taken the `keccak256` hash of the following text (including
+`\n` newline characters at both the beginning and end):
+
+```
+Before calculating the final zkey file of the [PreZKP ceremony](https://github.com/pantherprotocol/preZKPceremony/blob/69c43ba76293c9b6b91beba2b4a38f6dab96405f/README.md), we will apply a random beacon to the circuit.
+For this, we will apply the result of the round 1410000 of [drand](https://drand.love/).
+Here is the info of the drand chain that will be used:
+{
+  "public_key": "868f005eb8e6e4ca0a47c8a77ceaa5309a47978a7c71bc5cce96366b5d7a569937c529eeda66c7293784  a9402801af31",
+  "period": 30,
+  "genesis_time": 1595431050,
+  "hash": "8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce"
+}
+```
+
+This results in a hash of:
+
+    0x45c72731fc31fc83fe28ae9a48f39bd2e35ab2b14276054a1bfe909ca5b487f9
+
+(You can verify it yourself by copying and pasting that block of text
+with surrounding `\n` characters into [this
+site](https://www.keccak-256.cloxy.net/).)
+
+We have then made a commitment to this hash by placing it within
+[transaction `0x489212672a43220f8229752242d7bb1ec13349a37770955d9b82c737c3c69c56` on the Ethereum
+mainnet](https://etherscan.io/tx/0x489212672a43220f8229752242d7bb1ec13349a37770955d9b82c737c3c69c56).
+
+After the random of round 1410000 has arrived, it can be verified via
+[the `drand_verify` tool](https://github.com/hermeznetwork/drand_verify).
+
 ## Future work
 
 We may choose to conduct future ceremonies in a more user-friendly
