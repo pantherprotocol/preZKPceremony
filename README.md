@@ -191,8 +191,8 @@ and then follow the instructions in the output.
 ### IPFS networking issues, and a contigency plan
 
 If you are running an IPFS node behind a NAT gateway, it can be tricky
-to avoid networking issues - hence the hints in the preparatory steps
-above.
+to avoid networking issues - hence [the hints in the preparatory steps
+above](#network-configuration).
 
 If for some reason those suggestions don't work, e.g. the coordinator
 can't download your contribution via IPFS, there are of course several
