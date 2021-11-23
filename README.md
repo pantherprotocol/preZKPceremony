@@ -193,9 +193,19 @@ to avoid networking issues - hence the hints in the preparatory steps
 above.
 
 If for some reason those suggestions don't work, e.g. the coordinator
-can't download your contribution via IPFS, a fallback plan is simply
-to submit a PR to this repository which adds a new directory following
-the existing scheme.
+can't download your contribution via IPFS, there are of course several
+more conventional file-sharing fallback options to choose from:
+
+- Submit a PR to this repository which adds a new directory following
+  the existing scheme.
+
+- Upload the contribution to some centralised cloud storage (e.g.
+  Google Drive or Dropbox) and provide a link to the coordinator.
+
+- Use [Magic-Wormhole](https://magic-wormhole.readthedocs.io/en/latest/)
+  (it's awesome!)
+
+- Anything else in this vein.
 
 ## Completing the ceremony
 
