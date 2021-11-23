@@ -75,6 +75,15 @@ At the end of the output, you should see something like:
 
 At this point you can hit `Control-C` to stop watching the logs.
 
+Finally, to reduce the risk of network connectivity issues:
+
+  - Please ensure that your machine's firewall (if any) allows
+    incoming traffic on TCP port 4001.
+
+  - If you have a NAT router, please consider enabling UPnP
+    and/or setting up port forwarding for incoming traffic on
+    TCP port 4001 to the machine running Docker.
+
 ## Get in the queue!
 
 Now let the coordinator know you are ready to make your contribution,
@@ -176,6 +185,17 @@ To upload the contribution:
     QmYDsgWYRuHNYBeJABGZ6Csdj256jvj4E4WYX2dJ6w6iCj
 
 and then follow the instructions in the output.
+
+### IPFS networking issues, and a contigency plan
+
+If you are running an IPFS node behind a NAT gateway, it can be tricky
+to avoid networking issues - hence the hints in the preparatory steps
+above.
+
+If for some reason those suggestions don't work, e.g. the coordinator
+can't download your contribution via IPFS, a fallback plan is simply
+to submit a PR to this repository which adds a new directory following
+the existing scheme.
 
 ## Future work
 
