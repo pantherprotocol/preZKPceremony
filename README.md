@@ -77,6 +77,8 @@ At the end of the output, you should see something like:
 
 At this point you can hit `Control-C` to stop watching the logs.
 
+### Get in the queue!
+
 Now let the coordinator know you are ready to make your contribution,
 and then wait for them to get back to you (bearing in mind time zone
 differences which might mean they are currently asleep!!)
@@ -86,6 +88,8 @@ to wait their turn, starting from where the previous contributor left
 off.  Your contribution will be invalid if you base it on a content ID
 which hasn't been explicitly given to you (and only you) by the
 coordinator.**
+
+### When it is your turn
 
 Once the coordinator has provided you with an IPFS content id, first
 store it in a shell variable, e.g.:
