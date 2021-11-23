@@ -51,6 +51,10 @@ You may optionally wish to verify the integrity of the repository:
 
     $ git fsck --full --no-dangling
 
+If you're using a new Mac with M1 CPU or similar CPU architecture,
+you'll have to apply [this workaround](https://github.com/appliedzkp/multisetups/issues/7)
+for now before building the Docker image.
+
 Build the Docker image:
 
     $ docker build -t multisetups .
