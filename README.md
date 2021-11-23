@@ -75,6 +75,8 @@ At the end of the output, you should see something like:
 
 At this point you can hit `Control-C` to stop watching the logs.
 
+### Network configuration
+
 Finally, to reduce the risk of network connectivity issues:
 
   - Please ensure that your machine's firewall (if any) allows
