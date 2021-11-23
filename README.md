@@ -78,8 +78,17 @@ At the end of the output, you should see something like:
 At this point you can hit `Control-C` to stop watching the logs.
 
 Now let the coordinator know you are ready to make your contribution,
-and they will provide you with an IPFS content id which you can store
-in a shell variable, e.g.:
+and then wait for them to get back to you (bearing in mind time zone
+differences which might mean they are currently asleep!!)
+
+**Please note: the ceremony is sequential, therefore each person has
+to wait their turn, starting from where the previous contributor left
+off.  Your contribution will be invalid if you base it on a content ID
+which hasn't been explicitly given to you (and only you) by the
+coordinator.**
+
+Once the coordinator has provided you with an IPFS content id, first
+store it in a shell variable, e.g.:
 
     $ cid=Qme5ABCQSgYT69x1WdZ8G6oGtaoU2SQXjUXkAwv6rYPCfi
 
