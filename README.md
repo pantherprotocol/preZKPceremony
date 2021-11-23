@@ -19,6 +19,7 @@ to the [Perpetual Powers of Tau][ppot] project.
 
 - A machine with the following components installed:
 
+  - `git`
   - `docker`
 
 Currently Linux and MacOS have been tested, but Windows may also work;
