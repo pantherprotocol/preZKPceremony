@@ -44,7 +44,7 @@ First check out the repository if you haven't already:
 Check out the following specific commit in order to ensure that
 there is no tampering or other deviation:
 
-    $ git checkout f298a820ff856d7f6b05cda4a55b9699d4844f2e
+    $ git checkout 1980ec96f0233e8d448b00da7a1ce7881a5f2580
 
 You may optionally wish to verify the integrity of the repository:
 
