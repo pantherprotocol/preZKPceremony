@@ -186,7 +186,10 @@ To upload the contribution:
     Contribution uploaded. Please send this multihash to the coordinator and keep your IPFS node running and connected to the IPFS network.
     QmYDsgWYRuHNYBeJABGZ6Csdj256jvj4E4WYX2dJ6w6iCj
 
-and then follow the instructions in the output.
+and then follow the instructions in the output, and also let the
+coordinator know how they can obtain any public key you have used for
+signing the transcript - e.g. whether it's available via a PGP
+keyserver, or via Keybase, and if so what your Keybase username is.
 
 ### IPFS networking issues, and a contigency plan
 
