@@ -34,9 +34,7 @@ https://github.com/celo-org/snark-setup/blob/master/RECOMMENDATIONS.md
 However, any contribution is valuable and appreciated, even if it does
 not follow all those recommendations.
 
-## Instructions
-
-### Preparation
+## Preparation (do ASAP)
 
 First check out the repository if you haven't already:
 
@@ -77,7 +75,7 @@ At the end of the output, you should see something like:
 
 At this point you can hit `Control-C` to stop watching the logs.
 
-### Get in the queue!
+## Get in the queue!
 
 Now let the coordinator know you are ready to make your contribution,
 and then wait for them to get back to you (bearing in mind time zone
@@ -89,7 +87,7 @@ off.  Your contribution will be invalid if you base it on a content ID
 which hasn't been explicitly given to you (and only you) by the
 coordinator.**
 
-### When it is your turn
+## Steps when it is your turn
 
 Once the coordinator has provided you with an IPFS content id, first
 store it in a shell variable, e.g.:
@@ -136,7 +134,7 @@ Check the verification passed; last line of the output should be:
 
     [INFO]  snarkJS: ZKey Ok!
 
-### Making a contribution
+### Generate your contribution
 
 Store some entropy in an `$entropy` environment variable:
 
@@ -148,6 +146,8 @@ Calculate your contribution:
 
     $ docker exec -it prezkp node build/index.js contribute -d /ceremony/old -n /ceremony/new -e "$entropy"
     Contribution complete. Please run the 'upload' subcommand. Next, sign the transcript in /ceremony/new/transcript.1.txt and send it to the coordinator.
+
+### Sign your contribution
 
 Despite what it says here, it is simpler if you put the signature alongside
 the transcript, e.g.:
@@ -166,6 +166,8 @@ You can even sign directly with Keybase, e.g.
 or via PGP:
 
     $ keybase pgp sign -d -i $new -o $new.asc
+
+### Share your contribution
 
 To upload the contribution:
 
