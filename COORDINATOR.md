@@ -84,18 +84,30 @@ Download the contribution into a fresh directory:
 
     docker exec -it prezkp node build/index.js download -m $ccid -d /ceremony/$cdir
 
-Verify the contribution:
+Set `$ptau`:
 
     ptau=powersOfTau28_hez_final_17.ptau
+
+Verify the contribution via Docker:
+
     docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/ptau/$ptau /ceremony/$cdir/PreZKP_10_prod.$cseq.zkey
+
+or outside:
+
+    ./node_modules/snarkjs/build/cli.cjs zkey verify preZKP/r1cs/PreZKP_10_prod.r1cs preZKP/ptau/$ptau preZKP/$cdir/PreZKP_10_prod.$cseq.zkey
 
 Check the verification passed; last line of the output should be:
 
     [INFO]  snarkJS: ZKey Ok!
 
-Verify the signature (if any):
+Verify the signature (if any), e.g.:
 
+    keybase pgp pull $cnick
     gpg --verify preZKP/$cdir/transcript.*.txt.asc
+
+or via keybase:
+
+    keybase verify -d preZKP/$cdir/transcript.*.txt.asc -i preZKP/$cdir/transcript.*.txt
 
 Upload the directory so it's available for the next contributor:
 
