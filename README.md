@@ -15,7 +15,19 @@ to the [Perpetual Powers of Tau][ppot] project.
 
 ## Prerequisites
 
-- Familiarity with running commands from the CLI
+- Familiarity with running commands from the CLI.
+
+- Asynchronous preparation time of ~5-45 minutes, followed by an
+  uninterrupted time slot of ~5-10 minutes, depending on how quick /
+  familiar you are with this kind of technology.
+
+  If you are familiar with git, Docker, basic TCP/IP networking
+  etc. the process should be quick and easy; even more so if you are
+  already familiar with zero knowledge trusted ceremonies.
+
+- During the uninterrupted time slot you will need to be responsive in
+  the ceremony communication channel, in order not to risk delays for
+  other participants.
 
 - A machine with the following components installed:
 
