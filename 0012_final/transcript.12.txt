@@ -1,0 +1,5 @@
+[32;22m[INFO]  [39;1msnarkJS[0m: Contribution Hash: 
+		6c1e1bdb ab7da97d a57750ed 332f4c8d
+		f7344c96 a14ece07 2fa84aa2 3cde527d
+		75fd082f 86c22c99 1ff3bf5c 418efff3
+		ae45b34a a8b517d9 61e3253e d294cb3a
