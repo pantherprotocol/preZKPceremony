@@ -21,6 +21,10 @@ For the instructions which contributors followed, see
 For the processes followed by the coordinator, see
 [`COORDINATOR.md`](COORDINATOR.md).
 
+Due to time limitations during the ceremony, attestations regarding
+the contributions were collected retroactively shortly after the
+ceremony, via the process in [`ATTESTATIONS.md`](ATTESTATIONS.md).
+
 ## Verifying the ceremony
 
 You may verify the ceremony results yourself:
