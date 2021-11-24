@@ -21,6 +21,19 @@ For the instructions which contributors followed, see
 For the processes followed by the coordinator, see
 [`COORDINATOR.md`](COORDINATOR.md).
 
+## Verifying the ceremony
+
+You may verify the ceremony results yourself:
+
+    npm i
+
+    ./node_modules/.bin/snarkjs zkey verify \
+        r1cs/PreZKP_10_prod.r1cs \
+        ptau/powersOfTau28_hez_final_17.ptau \
+        0012_final/PreZKP_10_prod.12.final.zkey
+
+and check that the output looks good.
+
 ## Future work
 
 Improvements to `multisetups` are

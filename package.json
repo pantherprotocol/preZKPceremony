@@ -1,0 +1,15 @@
+{
+  "name": "preZKPceremony",
+  "version": "0.0.1",
+  "description": "Phase 2 trusted setup for Panther Protocol PreZKP launch",
+  "keywords": [
+    "snarkjs",
+    "circom"
+  ],
+  "author": "Panther Protocol",
+  "license": "MIT",
+  "homepage": "https://pantherprotocol.io",
+  "dependencies": {
+    "snarkjs": "0.3.59"
+  }
+}
