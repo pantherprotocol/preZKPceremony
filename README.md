@@ -30,10 +30,11 @@ ceremony, via the process in [`ATTESTATIONS.md`](ATTESTATIONS.md).
 You may verify the ceremony results yourself:
 
     npm i
+    wget -c https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_17.ptau
 
     ./node_modules/.bin/snarkjs zkey verify \
         r1cs/PreZKP_10_prod.r1cs \
-        ptau/powersOfTau28_hez_final_17.ptau \
+        powersOfTau28_hez_final_17.ptau \
         0012_final/PreZKP_10_prod.12.final.zkey
 
 and check that the output looks good.
