@@ -142,3 +142,13 @@ or via any of the other alternatives listed at the bottom of
 Once again, thanks so much for your participation.  Please keep an eye
 out for announcements from Panther with more details on how the
 circuits of this ceremony are going to be used :-)
+
+## Disclaimer
+
+Please note that the original contributions steps in
+[`CONTRIBUTING.md`](CONTRIBUTING.md) have been updated to include the
+attestation generation steps - not in an attempt to rewrite history,
+but rather because it is expected that those steps will be reused for
+future ceremonies, in which it will be helpful to generate
+attestations prior to uploading, rather than retroactively at the end
+of the ceremony.

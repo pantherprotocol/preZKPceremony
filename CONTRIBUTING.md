@@ -73,7 +73,7 @@ for now before building the Docker image.
 
 Build the Docker image:
 
-    $ docker build -t multisetups .
+    $ ./scripts/docker-build.sh -t multisetups
 
 Prepare a directory to store your new contribution:
 
@@ -162,7 +162,7 @@ At this point you can safely ignore the error:
 Now perform the verification (note you will have to alter the sequence
 number in the last argument):
 
-    docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/$ptau /ceremony/old/PreZKP_10_prod.0.zkey
+    $ docker exec -it prezkp ./node_modules/snarkjs/build/cli.cjs zkey verify /ceremony/r1cs/PreZKP_10_prod.r1cs /ceremony/$ptau /ceremony/old/PreZKP_10_prod.0.zkey
 
 Check the verification passed; last line of the output should be:
 
@@ -179,14 +179,19 @@ Then type a long random string and hit `Enter`.
 Calculate your contribution:
 
     $ docker exec -it prezkp node build/index.js contribute -d /ceremony/old -n /ceremony/new -e "$entropy"
-    Contribution complete. Please run the 'upload' subcommand. Next, sign the transcript in /ceremony/new/transcript.1.txt and send it to the coordinator.
 
-### Sign your contribution
+### Generate an attestation
 
-Despite what it says here, it is simpler if you put the signature alongside
-the transcript, e.g.:
+    $ docker exec -it prezkp node build/index.js attest -d /ceremony/new -t attestation.template.md
 
-    $ gpg --detach-sign --armor ceremony/new/transcript.*.txt
+and then edit the generated file so that it is accurate.
+
+### Sign your attestation
+
+Ideally you should generate a signature alongside the attestation,
+e.g.:
+
+    $ gpg --detach-sign --armor ceremony/new/attestation.*.md
 
 Even better, use [Keybase](https://keybase.io/) to cryptographically
 prove the link between your GPG private key and your other accounts
@@ -194,7 +199,7 @@ such as GitHub, Twitter etc.
 
 You can even sign directly with Keybase, e.g.
 
-    $ new=ceremony/new/transcript.3.txt  # adjust number as appropriate
+    $ new=ceremony/new/attestation.3.md  # adjust number as appropriate
     $ keybase sign -d -i $new -o $new.asc
 
 or via PGP:
@@ -203,7 +208,8 @@ or via PGP:
 
 ### Share your contribution
 
-To upload the contribution:
+To upload all the files in one go (i.e. the `.zkey` contribution,
+transcript, attestation, and signature):
 
     $ docker exec -it prezkp node build/index.js upload -d /ceremony/new
     Contribution uploaded. Please send this multihash to the coordinator and keep your IPFS node running and connected to the IPFS network.
@@ -211,7 +217,7 @@ To upload the contribution:
 
 and then follow the instructions in the output, and also let the
 coordinator know how they can obtain any public key you have used for
-signing the transcript - e.g. whether it's available via a PGP
+signing the attestation - e.g. whether it's available via a PGP
 keyserver, or via Keybase, and if so what your Keybase username is.
 
 ### IPFS networking issues, and a contigency plan
